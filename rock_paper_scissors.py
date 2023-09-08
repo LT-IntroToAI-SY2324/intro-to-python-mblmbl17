@@ -1,1 +1,27 @@
-# We will write a rock paper scissors game in class - Complete it in this file
+# We will write a rock paper scissors game in class - Complete it in this file 
+#Player and computer
+#function to decide who wins, conditionals 
+#Loop???
+# we will need a dictionary
+import random
+
+
+def get_choices():
+    options = ["rock", "paper", "scissors"]
+    winner = 0
+    while winner == 0:
+    playerC = input("Enter your choice: ")
+    computerC = random.choice(options)
+    choices = {"player": playerC, "computer": computerC}
+    if choices["player"] == "rock" and choices["computer"] == "rock":
+        return "tie"
+    if choices["player"] == "rock" and choices["computer"] == "scissors":
+        return "player wins"
+    if choices["player"] == "rock" and choices["computer"] == "paper":
+        return "computer wins"
+    if choices["player"] == "paper" and choices["computer"] == "paper":
+        return "tie"
+    
+
+choices = get_choices()
+print(choices)
